@@ -1,0 +1,32 @@
+Given a number N and a digit d, find the total number of occurrence of digit d in number N.
+==========================================================================================================
+
+INPUT: Two numbers N and d separated by whitespace.
+
+OUTPUT: Total number of occurrence of digit d in N
+
+CONSTRAINTS: 
+
+0<N<=10000000
+0<=d<=9
+==========================================================================================================
+Solution:
+
+#include <stdio.h>
+
+void main()
+{
+    int N, d, r, count = 0;
+    scanf("%d %d",&N, &d);
+    
+    //Logic
+    while(N > 0){
+        r = N % 10;
+        if(r==d && r%d == 0){
+            count++;
+        }
+        N = N/10;
+    }
+    
+    printf("%d",count);
+}
