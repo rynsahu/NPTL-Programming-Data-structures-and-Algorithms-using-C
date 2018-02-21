@@ -1,0 +1,48 @@
+Write a program in C to check whether two given strings a and b are anagram of each other or not. 
+An anagram of a string is another string that contains same characters, only the order of characters can be different.
+For example, “abcd” and “dabc” are anagram of each other.
+=====================================================================================================================
+
+Input Constraints:
+
+1) Input strings can be of length 1 to 100.
+2) The input will have only letters from English alphabet.
+3) Only lowercase letters are used.
+4) There are no space in the strings.
+
+Input: Two strings a and b separated by a whitespace.
+
+Output: 
+YES if strings are anagram of each other else NO.
+
+Example 1:
+amit mita
+YES
+
+Example 2:
+mat bat
+NO
+=======================================================================================================================
+Solution:
+
+#include <stdio.h>
+void main(){
+   int i,j,count=0;
+   char a[100],b[100];
+   scanf("%s%s", &a,&b);
+   //logic
+   if(strlen(a)==strlen(b)){
+   	  for(i=0; a[i]!='\0'; i++){
+  	   	  for(j=0; b[j]!='\0'; j++){
+  	   	  	 if(a[i]==b[j])
+  	   	  	    count++;
+  	   	  }
+  	   }
+  	   if(count==strlen(a))
+  	      printf("YES");
+       else
+  	      printf("NO");
+   }
+   else{
+   	printf("NO");
+   }
