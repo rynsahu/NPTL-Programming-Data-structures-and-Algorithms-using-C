@@ -1,0 +1,53 @@
+Write a C program to check whether a number N is power of 2 or not
+==============================================================================================
+
+Explanation:
+Take number 12.
+
+NO : as 12 is not a power of two
+
+Constraint:
+
+1<=N<=10000000
+
+Input: A single number
+
+Output:  YES if it is power of 2 else NO
+
+Example 1:
+
+Input: 123
+
+Output: NO
+
+Example 2:
+
+Input: 128
+================================================================================================
+Solution:
+
+#include <stdio.h>
+
+void main()
+{
+    int n, r;
+    printf("Number: ");
+    scanf("%d",&n);
+    
+    //Logic
+    while(n > 0){
+        n = n/2;
+        if(n%2 != 0){
+            break;
+        }
+    }
+   
+   //Chacking for the last value of "n" should b "1".
+   if(n==1){
+       printf("Yes");
+   } 
+   else{
+       printf("NO");
+   }
+    
+}
