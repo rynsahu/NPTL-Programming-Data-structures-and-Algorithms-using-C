@@ -1,0 +1,21 @@
+#include <stdio.h>
+void main(){
+   int i,j,r,c;
+   //length of the rows & cols.
+   scanf("%d%d", &r,&c);
+   int arr[r][c];
+
+   	  //taking inputs.
+   	  for(i=0; i<r; i++){
+   	      for(j=0; j<c; j++){
+	   	     scanf("%d", &arr[i][j]);
+	      }
+      }
+   //printing transpose of a given Matrix.
+    for(j=0; j<c; j++){
+   	 for(i=0; i<r; i++){
+            printf("%d\t",arr[i][j]);
+	   }
+	   printf("\n");
+    }
+}
