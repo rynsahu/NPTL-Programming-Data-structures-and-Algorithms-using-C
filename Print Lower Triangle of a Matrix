@@ -1,0 +1,25 @@
+#include <stdio.h>
+void main(){
+   int i,j,r,c,count=0;
+   //length of the rows & cols
+   scanf("%d%d", &r,&c);
+   int arr[r][c];
+  
+   	  //taking inputs.
+   	  for(i=0; i<r; i++){
+   	      for(j=0; j<c; j++){
+	   	     scanf("%d", &arr[i][j]);
+	      }
+      }
+   //printing lower triangle
+    for(i=0; i<r; i++){
+   	 for(j=0; j<c; j++){
+   	 	 if(count >= j)
+            printf("%d\t",arr[i][j]);
+         else
+            printf("0\t");
+	   }
+	   printf("\n");
+	   count++;
+    }
+}
